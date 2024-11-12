@@ -21,15 +21,18 @@ export default function HomePage() {
             //Initiate Solana Connection, Replace with your own Helius RPC
             const connection = new anchor.web3.Connection(heliusEndpoint, "confirmed");
 
+            //Call the serverless function
             const res = await axios
                 .post('/api/purchase_token', {
                     userWalletString: publicKey!.toString()
                 })
                 .then((response) => response.data)
 
+            //Deserialize the transaction
             let transaction = anchor.web3.Transaction.from(Buffer.from(res.serializedTransaction, 'base64'));
+            //Ask the user to sign/send the transaction
             let sig = await sendTransaction!(transaction, connection,)
-            console.log("sig", sig)
+      
             alert("Purchased!")
 
         } catch (e) {
