@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  width: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+background-color: rgba(255, 255, 255, 0.6);
+border-radius: 4px;
+width: 4px;
+cursor: pointer;
+}
+
+
+/* Default table styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px;
+  text-align: left;
+}
+
+body {
+  background-color: black;
+}

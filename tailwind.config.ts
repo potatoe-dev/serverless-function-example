@@ -1,0 +1,87 @@
+import type { Config } from 'tailwindcss'
+
+const config: Config = {
+  content: [
+    './pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './components/**/*.{js,ts,jsx,tsx,mdx}',
+    './app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      keyframes: {
+        shake: {
+          '0%, 100%': { transform: 'translateX(0)' },
+          '10%, 30%, 50%, 70%, 90%': { transform: 'translateX(-10px)' },
+          '20%, 40%, 60%, 80%': { transform: 'translateX(10px)' },
+        },
+      },
+      animation: {
+        shake: 'shake 0.5s ease-in-out',
+      },
+      maxHeight: {
+        main: 'calc(100dvh - 80px)',
+      },
+      height: {
+        main: 'calc(100dvh - 80px)',
+      },
+      minHeight: {
+        main: 'calc(100dvh - 80px)',
+      },
+      colors: {
+        offblack: '#121212',
+        gameboy: '#E1EACE',
+        lightSage: '#BECCA5',
+        sage: '#829A7D',
+        darkSage: '#4F5441',
+        slime: '#BDF742',
+        mutant: '#48732B',
+        alert: '#FF0000',
+        ash: '#CCCCCC',
+        creme: '#F9F4F0',
+        night: '#171717',
+        mallyellow: '#FFD101',
+        mallpink: '#FF34A9',
+        poxGreen: '#28FF2A',
+        poxLightGreen: '#C9FEA4',
+        poxRed: '#FF4141',
+        lspVeryLightBlue: '#6AEBE1',
+        lspLightBlue: '#67D4CC',
+        lspBlue: ' #00A69C',
+        lspBlack: ' #1A1A1A',
+        gogoBlue: '#6AEBE1',
+        gogoPurple: '#BA8AFF',
+        gogoGrey: '',
+        gogoBlack: '',
+        chonkyRed: '#DE1F26',
+        chonkyGold: '#F7DD94',
+        popitsPink: '#FFF0FF',
+        popitsLightPurple: '#DEC8E3',
+        popitsPurple: '#AE96B9',
+        popitsDarkPurple: '#674C73',
+        hakoiriRed: '#B8252F',
+        hakoiriLightRed: '#BA4A51',
+        hakoiriGrey: '#231F20',
+        hakoiriPaper: '#2D2D2D',
+      },
+      fontFamily: {
+        roboto: ['var(--font-roboto)'],
+        pixel: ['var(--font-pixel)'],
+        pixelbold: ['var(--font-pixelbold)'],
+        pixelblack: ['var(--font-pixelblack)'],
+        walshcond: ['var(--font-walshcond)'],
+        walshbold: ['var(--font-walshbold)'],
+        walshbolditalic: ['var(--font-walshbolditalic)'],
+        chinchilla: ['var(--font-chinchilla)'],
+        vt323: ['var(--font-vt323)'],
+        japanese3017: ['var(--font-japanese3017)'],
+        sairamed: ['var(--font-sairamed)'],
+        sairareg: ['var(--font-sairareg)'],
+        neurialMed: ['var(--font-neurialMed)'],
+        montSerrat: ['var(--font-mont)'],
+        korolev: ['korolev-compressed'],
+      },
+    },
+  },
+  plugins: [require('tailwindcss-animate')],
+}
+export default config
